@@ -3,13 +3,13 @@ Stores the custom pytorch dataset class.
 """
 import os
 from typing import Callable, Optional
+
 import numpy as np
 from PIL import Image
 import torch
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-from torchvision import transforms
 
 class ImageDataset(Dataset):
     """Finetune classification dataset."""
@@ -60,6 +60,7 @@ if __name__ == "__main__":
     ])
 
     dataset = ImageDataset(
+        # root="/mnt/c/Users/aloui/python/datasets/dogs_and_cats/test_set",
         root="/Users/aloui/python/datasets/dogs_and_cats/test_set",
         transform=transform
         )
